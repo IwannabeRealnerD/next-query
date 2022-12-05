@@ -1,0 +1,16 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode",
+      "content": "this is example content"
+    },
+    {
+      "id": 3,
+      "title": "test title 2",
+      "author": "khannewayne",
+      "content": "저는 한국인입니다. BMW R1250RS보다 좋은 스포츠 투어러 있으면 추천좀 부탁드려요."
+    }
+  ]
+}
