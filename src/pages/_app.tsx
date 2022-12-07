@@ -5,9 +5,10 @@ import {
 } from "@tanstack/react-query";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-import "../styles/globals.css";
-
-export default function App({ Component, pageProps }: AppProps) {
+export default function NextRQApp({
+  Component,
+  pageProps,
+}: AppProps) {
   const queryClient = new QueryClient();
 
   return (
