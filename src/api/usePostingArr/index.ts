@@ -3,6 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 
 import { postingArrKeyObj } from "./keyObjFactory";
 import { GetPostingArrDef } from "./type";
+import { postingArrSelector } from "./util";
 
 const getPostingArr: GetPostingArrDef = async () => {
   const { data } = await axios.get("http://localhost:3005/posting");
@@ -11,7 +12,7 @@ const getPostingArr: GetPostingArrDef = async () => {
 
 export const usePostingArr = () => {
   const queryResult = useQuery(postingArrKeyObj.postingArr(), getPostingArr, {
-    // select: ({ data }) => selector(data),
+    select: (data) => postingArrSelector(data),
   });
   return queryResult;
 };

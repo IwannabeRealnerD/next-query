@@ -3,11 +3,11 @@ import { NextPage } from "next";
 import { usePostingArr } from "../../api/usePostingArr";
 
 const PostingList: NextPage = () => {
-  const { data } = usePostingArr();
+  const { data: postingArr } = usePostingArr();
   return (
     <main>
       <h1>hi</h1>
-      <p>{JSON.stringify(data)}</p>
+      <p>포스팅{postingArr?.map((content) => content.title)}</p>
     </main>
   );
 };
