@@ -2,15 +2,21 @@
   "posting": [
     {
       "posting_id": 1,
-      "posting_Title": "json-server",
-      "Author": "typicode",
-      "Content": "this is example content"
+      "posting_title": "json-server",
+      "posting_author": "typicode",
+      "posting_content": "this is example content"
+    },
+    {
+      "posting_id": 2,
+      "posting_title": "test title 2",
+      "posting_author": "khannewayne",
+      "posting_content": "저는 한국인입니다. BMW R1250RS보다 좋은 스포츠 투어러 있으면 추천좀 부탁드려요."
     },
     {
       "posting_id": 3,
-      "posting_Title": "test title 2",
-      "Author": "khannewayne",
-      "Content": "저는 한국인입니다. BMW R1250RS보다 좋은 스포츠 투어러 있으면 추천좀 부탁드려요."
+      "posting_title": "Have you come to destory me obiwan",
+      "posting_author": "Lord Vador",
+      "posting_content": "obiwan!!!!! obiwan!!!!!obiwan!!!!!"
     }
   ]
 }
