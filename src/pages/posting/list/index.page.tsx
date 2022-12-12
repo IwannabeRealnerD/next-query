@@ -1,6 +1,6 @@
 import { NextPage } from "next";
 
-import { usePostingArr } from "../../../api/usePostingArr";
+import { usePostingArr } from "@/api/usePostingArr";
 
 const PostingList: NextPage = () => {
   const { data: postingArr } = usePostingArr();
