@@ -1,11 +1,6 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
-  extends: [
-    "next/core-web-vitals",
-    "airbnb",
-    "plugin:@typescript-eslint/recommended",
-    "prettier",
-  ],
+  extends: ["next/core-web-vitals", "airbnb", "plugin:@typescript-eslint/recommended", "prettier"],
   plugins: ["import"],
   rules: {
     "react/no-unknown-property": ["error", { ignore: ["css"] }],
@@ -21,10 +16,7 @@ module.exports = {
         namedComponents: ["arrow-function", "function-declaration"],
       },
     ],
-    "react/jsx-filename-extension": [
-      "warn",
-      { extensions: [".ts", ".tsx"] },
-    ],
+    "react/jsx-filename-extension": ["warn", { extensions: [".ts", ".tsx"] }],
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "import/no-extraneous-dependencies": [
@@ -50,15 +42,6 @@ module.exports = {
     "@next/next/no-img-element": "error",
     camelcase: "off",
   },
-  overrides: [
-    {
-      files: ["*.stories.tsx"],
-      rules: {
-        "storybook/prefer-pascal-case": "off",
-        camelcase: "off",
-      },
-    },
-  ],
 
   ignorePatterns: ["next.config.js"],
 };
