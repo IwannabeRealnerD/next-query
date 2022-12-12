@@ -1,6 +1,12 @@
 module.exports = {
   parser: "@typescript-eslint/parser",
-  extends: ["next/core-web-vitals", "airbnb", "plugin:@typescript-eslint/recommended", "prettier"],
+  extends: [
+    "next/core-web-vitals",
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
+    "prettier",
+  ],
   plugins: ["import"],
   rules: {
     "react/no-unknown-property": ["error", { ignore: ["css"] }],
