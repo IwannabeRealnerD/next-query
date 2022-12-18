@@ -1,15 +1,27 @@
 import { NextPage } from "next";
 
 import { usePostingArr } from "@/apis/usePostingArr";
+import { css } from "@emotion/react";
 
-const PostingList: NextPage = () => {
+const PostingListPage: NextPage = () => {
   const { data: postingArr } = usePostingArr();
   return (
     <main>
-      <h1>hi</h1>
-      <p>포스팅{postingArr?.map((content) => content.title)}</p>
+      <h1>포스팅</h1>
+      <section
+        css={css`
+          display: flex;
+          flex-direction: column;
+        `}
+      >
+        {postingArr?.map((content) => (
+          <button key={content.id} type="button">
+            <p>{content.title}</p>
+          </button>
+        ))}
+      </section>
     </main>
   );
 };
 
-export default PostingList;
+export default PostingListPage;

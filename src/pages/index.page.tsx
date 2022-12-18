@@ -9,7 +9,6 @@ export default function MainPage() {
         <Link href={INTERNAL_URL.POSTING_LIST} css={cssObj.linkButton}>
           posting page
         </Link>
-        <div css={cssObj.linkButton} />
       </nav>
       <main>MainPage</main>
     </main>

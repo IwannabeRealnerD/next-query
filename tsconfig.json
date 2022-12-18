@@ -16,7 +16,6 @@
     "incremental": true,
     "types": ["@emotion/react/types/css-prop"],
     "baseUrl": ".",
-    "jsxImportSource": "@emotion/react",
     "paths": { "@/*": ["src/*"], "@/public": ["public/*"] }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
