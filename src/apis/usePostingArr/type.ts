@@ -10,3 +10,8 @@ export interface ResponseObjDef {
 export interface GetPostingArrDef {
   ({ queryKey }: QueryFunctionContext): Promise<ResponseObjDef[]>;
 }
+
+export const postingArrKeyObj = {
+  all: [{ data: "postingArr" }] as const,
+  postingArr: () => [{ data: "postingArr" }] as const,
+};

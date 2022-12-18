@@ -1,8 +1,7 @@
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 
-import { postingArrKeyObj } from "./keyObjFactory";
-import { GetPostingArrDef } from "./type";
+import { GetPostingArrDef, postingArrKeyObj } from "./type";
 import { postingArrSelector } from "./util";
 
 const getPostingArr: GetPostingArrDef = async () => {
