@@ -1,1 +1,1 @@
-export const INTERNAL_URL = { POSTING_LIST: "/posting/list" };
+export const INTERNAL_URL = { POSTING_LIST: "/post" };

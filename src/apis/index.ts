@@ -1,0 +1,1 @@
+export { useGetPostArr } from "./useGetPostArr";

@@ -1,6 +1,16 @@
 import { css } from "@emotion/react";
 
 export const cssObj = {
+  headerContainer: css`
+    display: flex;
+    align-items: center;
+    gap: 0 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+  `,
+  textArea: css`
+    width: 20rem;
+  `,
   container: css`
     display: flex;
     flex-direction: column;
@@ -10,7 +20,6 @@ export const cssObj = {
   postingBox: css`
     width: 30rem;
     background-color: #ffc0cba8;
-    /* border: 1px solid #200002; */
     border-radius: 1rem;
     display: flex;
     justify-content: center;

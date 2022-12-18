@@ -7,7 +7,7 @@ export interface ResponseObjDef {
   posting_content: string;
 }
 
-export interface GetPostingArrDef {
+export interface GetPostArrDef {
   ({ queryKey }: QueryFunctionContext): Promise<ResponseObjDef[]>;
 }
 
