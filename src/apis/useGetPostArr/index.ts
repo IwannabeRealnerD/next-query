@@ -9,9 +9,7 @@ const getPostArr: GetPostArrDef = async () => {
   return data;
 };
 
-export const useGetPostArr = () => {
-  const queryResult = useQuery(postingArrKeyObj.postingArr(), getPostArr, {
+export const useGetPostArr = () =>
+  useQuery(postingArrKeyObj.postingArr, getPostArr, {
     select: (data) => postingArrSelector(data),
   });
-  return queryResult;
-};

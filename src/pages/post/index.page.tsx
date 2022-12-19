@@ -1,28 +1,37 @@
 import { NextPage } from "next";
-import { useForm } from "react-hook-form";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { useQueryClient } from "@tanstack/react-query";
 
 import { useGetPostArr } from "@/apis";
-import { cssObj } from "./style";
+import { usePostpost } from "@/apis/usePutPost";
+import { PostDef } from "@/type/postType";
+import { postingArrKeyObj } from "@/apis/useGetPostArr/type";
 
-interface PostDef {
-  content: string;
-}
+import { cssObj } from "./style";
 
 const PostingListPage: NextPage = () => {
   const { register, handleSubmit } = useForm<PostDef>();
+  const queryClient = useQueryClient();
 
   const { data: postingArr } = useGetPostArr();
+  const { mutate: addPostingUpdate } = usePostpost();
 
-  const postSubmitHandler = () => null;
+  const postSubmitHandler: SubmitHandler<PostDef> = (inputData) => {
+    addPostingUpdate(inputData, {
+      onSuccess: () => queryClient.invalidateQueries(postingArrKeyObj.postingArr),
+    });
+  };
 
   return (
     <main>
       <h1>포스팅</h1>
       <form css={cssObj.headerContainer} onSubmit={handleSubmit(postSubmitHandler)}>
-        <input type="textarea" css={cssObj.textArea} {...register("content")} />
-        <button type="button" onClick={postSubmitHandler}>
-          게시글 생성
-        </button>
+        <p>제목</p>
+        <input type="textarea" css={cssObj.textArea} {...register("posting_title")} />
+        <p>글쓴이</p>
+        <input type="textarea" css={cssObj.textArea} {...register("posting_author")} />
+        <input type="textarea" css={cssObj.textArea} {...register("posting_content")} />
+        <button type="submit">게시글 생성</button>
       </form>
       <section css={cssObj.container}>
         {postingArr?.map((content) => (
