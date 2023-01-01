@@ -4,11 +4,11 @@ import { AxiosError, AxiosResponse } from "axios";
 import { axiosInstance } from "@/apis/axiosInatance";
 import { PostDef } from "@/type/postType";
 
-import { postPostDef } from "./type";
+import { AddPostDef } from "./type";
 
-export const postPost: postPostDef = async (requestObj) => {
+export const addPost: AddPostDef = async (requestObj) => {
   const { data } = await axiosInstance.post("/posting", requestObj);
   return data;
 };
 
-export const usePostpost = () => useMutation<AxiosResponse, AxiosError, PostDef>(postPost);
+export const useAddPost = () => useMutation<AxiosResponse, AxiosError, PostDef>(addPost);

@@ -3,9 +3,10 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { useQueryClient } from "@tanstack/react-query";
 
 import { useGetPostArr } from "@/apis";
-import { usePostpost } from "@/apis/useAddPost";
+import { useAddPost } from "@/apis/useAddPost";
 import { PostDef } from "@/type/postType";
 import { postingArrKeyObj } from "@/apis/useGetPostArr/type";
+import { useDeletePost } from "@/apis/useDeletePostArr";
 
 import { cssObj } from "./style";
 
@@ -14,12 +15,17 @@ const PostingListPage: NextPage = () => {
   const queryClient = useQueryClient();
 
   const { data: postingArr } = useGetPostArr();
-  const { mutate: addPostingUpdate } = usePostpost();
+  const { mutate: addPostingMutation } = useAddPost();
+  const { mutate: deletePostingMutation } = useDeletePost();
 
   const postSubmitHandler: SubmitHandler<PostDef> = (inputData) => {
-    addPostingUpdate(inputData, {
+    addPostingMutation(inputData, {
       onSuccess: () => queryClient.invalidateQueries(postingArrKeyObj.postingArr),
     });
+  };
+
+  const deletePostingHandler = (requestObj: { id: number }) => {
+    deletePostingMutation(requestObj);
   };
 
   return (
@@ -41,10 +47,13 @@ const PostingListPage: NextPage = () => {
         <button type="submit">게시글 생성</button>
       </form>
       <section css={cssObj.container}>
-        {postingArr?.map((content) => (
-          <div key={content.id} css={cssObj.postingBox}>
-            <p>{content.title}</p>
-            <button type="button">삭제</button>
+        {postingArr?.map((posting) => (
+          <div key={`키-${posting.id}`} css={cssObj.postingBox}>
+            <p>{posting.title}</p>
+            {posting.id}
+            <button type="button" onClick={() => deletePostingHandler({ id: posting.id })}>
+              삭제
+            </button>
           </div>
         ))}
       </section>
