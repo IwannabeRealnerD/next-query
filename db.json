@@ -35,6 +35,24 @@
       "posting_author": "앙 ",
       "posting_content": "아이",
       "id": 6
+    },
+    {
+      "posting_title": "제목 입니다",
+      "posting_author": "제목 이요",
+      "posting_content": "제목",
+      "id": 7
+    },
+    {
+      "posting_title": "",
+      "posting_author": "",
+      "posting_content": "",
+      "id": 8
+    },
+    {
+      "posting_title": "",
+      "posting_author": "",
+      "posting_content": "",
+      "id": 9
     }
   ]
 }

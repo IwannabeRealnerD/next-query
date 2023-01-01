@@ -3,10 +3,12 @@ import { css } from "@emotion/react";
 export const cssObj = {
   headerContainer: css`
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 0 2rem;
     justify-content: center;
     margin-bottom: 2rem;
+    background-color: lightgray;
   `,
   textArea: css`
     width: 20rem;

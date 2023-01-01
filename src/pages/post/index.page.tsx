@@ -3,7 +3,7 @@ import { useForm, SubmitHandler } from "react-hook-form";
 import { useQueryClient } from "@tanstack/react-query";
 
 import { useGetPostArr } from "@/apis";
-import { usePostpost } from "@/apis/usePutPost";
+import { usePostpost } from "@/apis/useAddPost";
 import { PostDef } from "@/type/postType";
 import { postingArrKeyObj } from "@/apis/useGetPostArr/type";
 
@@ -26,11 +26,18 @@ const PostingListPage: NextPage = () => {
     <main>
       <h1>포스팅</h1>
       <form css={cssObj.headerContainer} onSubmit={handleSubmit(postSubmitHandler)}>
-        <p>제목</p>
-        <input type="textarea" css={cssObj.textArea} {...register("posting_title")} />
-        <p>글쓴이</p>
-        <input type="textarea" css={cssObj.textArea} {...register("posting_author")} />
-        <input type="textarea" css={cssObj.textArea} {...register("posting_content")} />
+        <div>
+          <p>제목</p>
+          <input type="textarea" css={cssObj.textArea} {...register("posting_title")} />
+        </div>
+        <div>
+          <p>글쓴이</p>
+          <input type="textarea" css={cssObj.textArea} {...register("posting_author")} />
+        </div>
+        <div>
+          <p>내용</p>
+          <input type="textarea" css={cssObj.textArea} {...register("posting_content")} />
+        </div>
         <button type="submit">게시글 생성</button>
       </form>
       <section css={cssObj.container}>
