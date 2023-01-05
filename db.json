@@ -1,46 +1,10 @@
 {
   "posting": [
     {
-      "id": 1,
-      "posting_title": "json-server",
-      "posting_author": "typicode",
-      "posting_content": "this is example content"
-    },
-    {
-      "id": 2,
-      "posting_title": "test title 2",
-      "posting_author": "khannewayne",
-      "posting_content": "저는 한국인입니다. BMW R1250RS보다 좋은 스포츠 투어러 있으면 추천좀 부탁드려요."
-    },
-    {
-      "id": 3,
-      "posting_title": "Have you come to destory me obiwan",
-      "posting_author": "Lord Vador",
-      "posting_content": "obiwan!!!!! obiwan!!!!!obiwan!!!!!"
-    },
-    {
-      "posting_title": "awef",
-      "posting_author": "awefawefawefawef",
-      "posting_content": "contentcontentcontentcontent",
-      "id": 4
-    },
-    {
-      "posting_title": "feqwf",
-      "posting_author": "qwefqwef",
-      "posting_content": "fffff",
-      "id": 5
-    },
-    {
-      "posting_title": "제목",
-      "posting_author": "앙 ",
-      "posting_content": "아이",
-      "id": 6
-    },
-    {
-      "posting_title": "제목 입니다",
-      "posting_author": "제목 이요",
-      "posting_content": "제목",
-      "id": 7
+      "posting_title": "미건 정말 사랑해",
+      "posting_author": "매우 사랑해",
+      "posting_content": "진짜많이 사랑해",
+      "id": 3
     }
   ]
 }
