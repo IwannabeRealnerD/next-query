@@ -20,8 +20,6 @@ export const useDeletePost = () => {
       const previousData = queryClient.getQueryData(postingArrKeyObj.postingArr);
 
       queryClient.setQueryData<PostDef[]>(postingArrKeyObj.postingArr, (oldPostArr) => {
-        console.log(oldPostArr);
-        console.log(JSON.stringify(requestObj));
         if (!oldPostArr) return undefined;
 
         const filteredArr = oldPostArr.filter((oldPost) => oldPost.id !== requestObj.id);
