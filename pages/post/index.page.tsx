@@ -50,7 +50,7 @@ const PostingListPage: NextPage = () => {
         {postingArr?.map((posting) => (
           <div key={`키-${posting.id}`} css={cssObj.postingBox}>
             <p>{posting.title}</p>
-            {posting.id}
+            {posting.id}\
             <button type="button" onClick={() => deletePostingHandler({ id: posting.id })}>
               삭제
             </button>
