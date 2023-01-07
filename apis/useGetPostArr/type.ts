@@ -1,4 +1,4 @@
-import { PostDef } from "@/type/postType";
+import { PostDef } from "type/postType";
 import { QueryFunctionContext } from "@tanstack/react-query";
 
 export interface GetPostArrDef {

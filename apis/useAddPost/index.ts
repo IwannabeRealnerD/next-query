@@ -1,8 +1,8 @@
 import { useMutation } from "@tanstack/react-query";
 import { AxiosError, AxiosResponse } from "axios";
 
-import { axiosInstance } from "@/apis/axiosInatance";
-import { PostDef } from "@/type/postType";
+import { axiosInstance } from "apis/axiosInatance";
+import { PostDef } from "type/postType";
 
 import { AddPostDef } from "./type";
 

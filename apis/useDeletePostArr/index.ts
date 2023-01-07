@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
-import { PostDef } from "@/type/postType";
+import { PostDef } from "type/postType";
 
 import { DeletePostDef } from "./type";
 import { postingArrKeyObj } from "../useGetPostArr/type";

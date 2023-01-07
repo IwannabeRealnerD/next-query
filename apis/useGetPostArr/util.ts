@@ -1,4 +1,4 @@
-import { PostDef } from "@/type/postType";
+import { PostDef } from "type/postType";
 
 export const postingArrSelector = (postingArr: PostDef[]) =>
   postingArr.map((posting) => ({
