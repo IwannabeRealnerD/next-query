@@ -1,5 +1,6 @@
-import { INTERNAL_URL } from "constants/internalURL";
 import Link from "next/link";
+
+import { INTERNAL_URL } from "constants/internalURL";
 import Header from "./header";
 
 export default function MainPage() {
