@@ -1,3 +1,5 @@
+"use client";
+
 import { NextPage } from "next";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { useQueryClient } from "@tanstack/react-query";
